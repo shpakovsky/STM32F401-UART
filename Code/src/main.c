@@ -56,16 +56,14 @@ void UART_Send_Message(char* message)
 /* RXNEIE bit to null */
 void USART1_IRQHandler(void)
 {
-	/*if(USART1->SR & USART_CR1_RXNEIE)
+	if(USART1->SR & USART_CR1_RXNEIE)
 	{
-		
 		USART1->SR &= ~USART_CR1_RXNEIE;
 		
 		if(USART1->DR == '1')
 			UART_Send_Message("1");
 		else
 			UART_Send_Message("0");
-		
-	}*/
+	}
 }
 
